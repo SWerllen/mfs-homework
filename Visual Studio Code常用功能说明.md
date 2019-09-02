@@ -40,13 +40,13 @@
 
 VSCode安装插件十分容易，只需要在Extensions处搜索插件的名称，点击install即可安装。
 
-![1567426100557](Visual Studio Code常用功能说明.assets/1567426100557.png)
+![1567426100557](https://github.com/SWerllen/mfs-homework/blob/master/Visual%20Studio%20Code%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E.assets/1567426100557.png)
 
 #### 卸载：
 
 在已安装的插件界面处，点击卸载，即可卸载
 
-![1567426155603](Visual Studio Code常用功能说明.assets/1567426155603.png)
+![1567426155603](https://github.com/SWerllen/mfs-homework/blob/master/Visual%20Studio%20Code%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E.assets/1567426155603.png)
 
 ## 常用插件
 
