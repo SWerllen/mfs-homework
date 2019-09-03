@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>表单</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        .mform{
+            margin-left: 40%;
+            margin-right: 40%;
+            padding: 50px;
+            align-items: center;
+            background-color: azure;
+            width: 20%;
+        }
+        .mystyle{
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+        .mbutton{
+            font-size: 20px;
+            border-style: dotted;
+            border-radius: 3px;
+            border-color: rgb(151, 166, 252);
+            background: rgb(213, 235, 255)
+        }
+        </style>
+    </head>
+    <body>
+        <div class="mform">
+            <form action="../action" method="GET">
+                <div class="mystyle">
+                    用户： 
+                    <input name="username" type="text" placeholder="输入用户名" >
+                </div>
+                <div class="mystyle">
+                    密码： 
+                    <input type="password" name="password">
+                </div>
+                <div class="mystyle">
+                    性别： 
+                    <input type="radio" name="sex" value="male">男
+                    <input type="radio" name="sex" value="female">女
+                </div>
+                <div class="mystyle">
+                    技能：
+                    <input type="checkbox" name="skill" value="html">HTML
+                    <input type="checkbox" name="skill" value="css">CSS
+                    <input type="checkbox" name="skill" value="javascript">JavaScript
+                </div>
+                <div class="mystyle">
+                    城市：
+                    <select name="city">
+                        <option value="Peking">北京</option>
+                        <option value="Shanghai">上海</option>
+                        <option value="Shenzhen">深圳</option>
+                    </select>
+                </div>
+                <br />
+                <div class="mystyle">
+                    <button class="mbutton" type="submit">确认</button>
+                    <button class="mbutton" type="reset">重置</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
