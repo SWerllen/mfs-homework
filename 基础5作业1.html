@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>问卷调查</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        .mform{
+            margin-left: 30%;
+            margin-right: 30%;
+            padding: 50px;
+            align-items: center;
+            background-color: azure;
+            width: 40%;
+        }
+        .mystyle{
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+        .mbutton{
+            font-size: 20px;
+            border-style: dotted;
+            border-radius: 3px;
+            border-color: rgb(151, 166, 252);
+            background: rgb(213, 235, 255)
+        }
+        .question{
+            color: darkred;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        :invalid{
+            color:red;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="mform">
+            <form action="../action" method="POST">
+                <div class="mystyle">
+                    姓名： 
+                    <input name="username" type="text" placeholder="输入用户名" >
+                </div>
+                <div class="mystyle">
+                    邮箱： 
+                    <input type="email" name="email" placeholder="输入邮箱">
+                </div>
+                <div class="mystyle">
+                    密码： 
+                    <input type="password" name="password" placeholder="输入密码">
+                </div>
+                <div class="mystyle">
+                    性别： 
+                    <input type="radio" name="sex" value="male" checked>男
+                    <input type="radio" name="sex" value="female">女
+                </div>
+                <br />
+                <hr />
+                <div class="mystyle">
+                    <div class="question">
+                        你的目标是？
+                    </div>
+                    <input type="checkbox" name="who" value="hero">英雄
+                    <input type="checkbox" name="who" value="normal">平凡人
+                    <input type="checkbox" name="who" value="badman">坏人
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        你希望你的职业是？（可自己输入）
+                    </div>
+                    <input list="job" name="job" pattern="^([\u4e00-\u9fa5]|[.])*$">
+                    <datalist id="job">
+                        <option label="需要强硬的态度！">搬砖民工</option>
+                        <option label="需要迅速的反应！">城管战士</option>
+                        <option label="需要坚韧的品质！">外卖骑手</option>
+                        <option label="需要足够的头发！">前端码农</option>
+                    </datalist>
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        请选择你出生的日期时间！
+                    </div>
+                    <input type="date" name="date">
+                    <input type="time" name="time">
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        请选择你喜欢的颜色！
+                    </div>
+                    <input type="color" name="color">
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        请上传你的头像
+                    </div>
+                    <input type="file" name="picture">
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        如果你可以重生，希望有几个老婆？
+                    </div>
+                    <input type="number" min="0" max="1" name="wife">
+                </div>
+                
+                <br />
+                <div class="mystyle">
+                    <button class="mbutton" type="submit">确认</button>
+                    <button class="mbutton" type="reset">重置</button>
+                </div>
+            </form>
+            <form action="http://www.baidu.com/s" method="GET">
+                    <div class="mystyle">
+                        <div class="question">
+                            有什么疑问可以搜索：
+                        </div>
+                        <input type="search" name="wd">
+                        <input type="image" width="100px" src="https://www.baidu.com/img/bd_logo1.png" name="baidu">
+                    </div>
+                </form>
+        </div>
+    </body>
+</html>

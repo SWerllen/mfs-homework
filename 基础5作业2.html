@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>问卷调查</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        .mform{
+            margin-left: 30%;
+            margin-right: 30%;
+            padding: 50px;
+            align-items: center;
+            background-color: azure;
+            width: 40%;
+        }
+        .mystyle{
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+        .mbutton{
+            font-size: 20px;
+            border-style: dotted;
+            border-radius: 3px;
+            border-color: rgb(151, 166, 252);
+            background: rgb(213, 235, 255)
+        }
+        .question{
+            color: darkred;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        :invalid{
+            color:red;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="mform">
+            <form action="../action" method="POST">
+                <div class="mystyle">
+                    姓名： 
+                    <input name="username" type="text" placeholder="输入用户名" >
+                </div>
+                <div class="mystyle">
+                    邮箱： 
+                    <input type="email" name="email" placeholder="输入邮箱">
+                </div>
+                <div class="mystyle">
+                    密码： 
+                    <input type="password" name="password" placeholder="输入密码">
+                </div>
+                <div class="mystyle">
+                    性别： 
+                    <input type="radio" name="sex" value="male" checked>男
+                    <input type="radio" name="sex" value="female">女
+                </div>
+                <br />
+                <hr />
+                <div class="mystyle">
+                    <div class="question">
+                        你希望你的家乡是？（可自己输入）
+                    </div>
+                    <input list="job" name="job" pattern="^([\u4e00-\u9fa5]|[.])*$">
+                    <datalist id="job">
+                        <option label="首都">北京</option>
+                        <option label="魔都">上海</option>
+                        <option label="大城市">广州</option>
+                        <option label="新兴">深圳</option>
+                    </datalist>
+                </div>
+                <div class="mystyle">
+                    <div class="question">
+                        如果你可以重生，希望重生几次？
+                    </div>
+                    <input type="number" min="0" max="100" step="2" name="num">
+                </div>
+                <br />
+                <div class="mystyle">
+                    <button class="mbutton" type="submit">确认</button>
+                    <button class="mbutton" type="reset">重置</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
