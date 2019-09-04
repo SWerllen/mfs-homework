@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>居中</title>
+        <style>
+            *{
+                margin: 0;
+            }
+            .box1{
+                border: 1px red solid;
+                height: 100px;
+                line-height:100px;
+            }
+            .box2{
+                display: inline-block;
+                background-color: black;
+                height:30px;
+                width:60px;
+            }
+            .boxfather{
+                margin: 30px;
+                border: 1px red solid;
+                height: 300px;
+                width: 400px;
+                line-height: 300px;
+                position: relative;
+            }
+            .boxson{
+                height:100px;
+                width:100px;
+                background-color: cadetblue;
+                position: absolute;
+                top:0;
+                left:0;
+                right: 0;
+                bottom: 0;
+                margin: auto auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <span style="font-size: 44px">这行文字是垂直居中的。</span>
+            <div class="box2"></div>
+            <span>但是当大小不同的文字出现在同一行，就会以最开始的文字居中时的底部为后面元素的底部对齐。</span>
+        </div>
+        <div class="boxfather">
+            <div class="boxson">
+                    
+            </div>
+        </div>
+    </body>
+</html>
