@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>选择器hover</title>
+    <style>
+        .menu {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+        }
+
+        .menu li {
+            font-size: 20px;
+            border: 1px solid black;
+            background-color: antiquewhite;
+            width:40px;
+            text-align: center;
+        }
+
+        .menubutton {
+            float: left;
+            font-size: 23px;
+            border: 1px solid black;
+            background-color: antiquewhite;
+            color: black;
+        }
+
+        .menubutton:hover {
+            color: red;
+        }
+
+        .menubutton:hover .menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul style="list-style: none;">
+        <li class="menubutton">
+            导航1
+            <ul class="menu">
+                <li>打开</li>
+                <li>新建</li>
+                <li>保存</li>
+                <li>退出</li>
+            </ul>
+        </li>
+        <li class="menubutton">
+            导航2
+            <ul class="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- <span class="menubutton">
+
+    </span> -->
+</body>
+
+</html>
