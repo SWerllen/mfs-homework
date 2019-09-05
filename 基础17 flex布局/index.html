@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>圣杯布局</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .head {
+            height: 50px;
+            flex-basis: 2000px;
+            background: #cccccc;
+            order: 1;
+            flex: auto;
+        }
+
+        .middle {
+            min-height: 50px;
+            flex-basis: 2000px;
+            order: 2;
+            margin: 10px 0px;
+
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .leftside {
+            background: #00bcd4;
+            flex: none;
+            order: 1;
+            margin: 0 10px 0 0;
+            flex-basis: 150px;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            flex: auto;
+            background: #03a9f4;
+            order: 2;
+        }
+
+        .rightside {
+            flex: none;
+            background-color: #00bcd4;
+            order: 3;
+            margin: 0 0 0 10px;
+            flex-basis: 150px;
+        }
+
+        .bottom {
+            height: 50px;
+            flex: auto;
+            background: #cccccc;
+            order: 3;
+        }
+
+        .showcontent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: 300 18px '微软雅黑';
+        }
+    </style>
+    <style>
+        .plane {
+            display: flex;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: #cccccc;
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: black;
+            margin: 3px;
+        }
+
+        .dot2-1,
+        .dot3-1 {
+            align-self: flex-start;
+        }
+
+        .dot2-2,
+        .dot3-3 {
+            align-self: flex-end;
+        }
+
+        .dot4-2 {
+            margin-left: 10px;
+        }
+
+        .dot5-3 {
+            margin: 0 20px;
+        }
+
+        .p6{
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="middle">
+            <div class="main showcontent">
+                <div class="plane">
+                    <div class="dot"></div>
+                </div>
+                <div class="plane">
+                    <div class="dot dot2-1"></div>
+                    <div class="dot dot2-2"></div>
+                </div>
+                <div class="plane">
+                    <div class="dot dot3-1"></div>
+                    <div class="dot dot3-2"></div>
+                    <div class="dot dot3-3"></div>
+                </div>
+                <div class="plane">
+                    <div class="dot dot4-1"></div>
+                    <div class="dot dot4-2"></div>
+                    <div class="dot dot4-3"></div>
+                    <div class="dot dot4-4"></div>
+                </div>
+                <div class="plane">
+                    <div class="dot dot5-1"></div>
+                    <div class="dot dot5-2"></div>
+                    <div class="dot dot5-3"></div>
+                    <div class="dot dot5-4"></div>
+                    <div class="dot dot5-5"></div>
+                </div>
+                <div class="plane p6">
+                    <div class="dot dot6-1"></div>
+                    <div class="dot dot6-2"></div>
+                    <div class="dot dot6-3"></div>
+                    <div class="dot dot6-4"></div>
+                    <div class="dot dot6-5"></div>
+                    <div class="dot dot6-6"></div>
+                </div>
+            </div>
+            <div class="leftside showcontent">侧边栏1 固定宽度</div>
+            <div class="rightside showcontent">侧边栏2 固定宽度</div>
+        </div>
+        <div class="head showcontent">头部</div>
+        <div class="bottom showcontent">尾部</div>
+    </div>
+</body>
+
+</html>
