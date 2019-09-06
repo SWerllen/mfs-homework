@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: rgb(255, 200, 200);
+            border: 1px solid rgb(255, 200, 200);
+            border-radius: 8px;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        [class*="item"] {
+            display: block;
+            font: 300 20px/48px '微软雅黑';
+            text-decoration: none;
+            color: grey;
+            padding: 0 15px;
+            margin: 0 2px;
+        }
+
+        .item1:hover {
+            color: grey;
+        }
+
+        .item2:hover {
+            background: rgb(187, 187, 187);
+            color: grey;
+        }
+
+        .item3:hover {
+            color: black;
+        }
+
+        .item4 {
+            text-align: left;
+            background: transparent;
+            border: 0;
+        }
+
+        .item4:hover{
+            color: black;
+        }
+        
+        .item4:focus {
+            border: none;
+            background:rgb(187, 187, 187);
+        }
+
+        .item4:focus+.menu {
+            display: block;
+        }
+
+        .menu {
+            text-align: left;
+            display: none;
+            list-style: none;
+            position: absolute;
+            top: 30px;
+            left: 300px;
+            border: 1px rgb(255, 200, 200) solid;
+            padding: 10px;
+            z-index: -1;
+        }
+
+        .mitem:hover {
+            background: rgb(209, 209, 209);
+        }
+
+        .line{
+            margin: 3px;
+            border: 1px solid rgb(187, 187, 187);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container{
+                flex-wrap: wrap;
+            }
+            [class*="item"]{
+                width: 100%;
+            }
+            .menu{
+                display: none;
+                position: static;
+                border: none;
+                padding:0 10px;
+                z-index: 1;
+                width: 100%;
+            }
+
+        }
+    </style>
+
+    <head />
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a class="item1" href="./nav.html">码蜂社教程</a>
+            <a class="item2" href="./nav.html">IOS</a>
+            <a class="item3" href="./nav.html">SVN</a>
+            <button class="item4">JAVA
+                </button>
+                <ul class="menu">
+                        <li>
+                            <a class="mitem" href="#">jmeter</a>
+                        </li>
+                        <li>
+                            <a class="mitem" href="#">EJB</a>
+                        </li>
+                        <li>
+                            <a class="mitem" href="#">Jasper Report</a>
+                        </li>
+                        <li class="line"></li>
+                        <li>
+                                <a class="mitem" href="#">分离的链接</a>
+                            </li>
+                            <li class="line"></li>
+                            <li>
+                                    <a class="mitem" href="#">又一个分离的链接</a>
+                                </li>
+                </ul>
+        </div>
+    </nav>
+</body>
+
+</html>
