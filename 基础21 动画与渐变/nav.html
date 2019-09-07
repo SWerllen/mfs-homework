@@ -128,6 +128,7 @@
         }
     </style>
     <style>
+
         .animation {
             display: block;
             position: fixed;
@@ -222,6 +223,24 @@
 
             100% {
                 transform: rotate(360deg);
+            }
+        }
+
+        @media only screen and (max-width: 440px) {
+            .animation{
+                top: 75%;
+            }
+            .big{
+                width: 15px;
+                height: 15px;
+            }
+            .small{
+                width: 5px;
+                height: 5px;
+            }
+            .middle{
+                width: 10px;
+                height: 10px;
             }
         }
     </style>
