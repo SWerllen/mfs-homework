@@ -1,8 +1,26 @@
-var sen=prompt("你好！请输入算术式：",""); 
-var b;
-try{
-    var b=eval(sen);
-    console.log(b);
-}catch(err){
-    console.log(err);
+"use strict"
+function Person(name, sex) {
+    this.name = name;
+    this.sex = sex;
+    this.say = function (i) {
+            var content=[this.name,this.sex];
+            try{
+                console.log("I am " + content[i]);
+            }catch (e) {
+                console.log(e);
+            }
+    }
 }
+
+var person=new Person('werllen','man');
+person.say(0)
+delete person.name;
+person.say(0)
+
+var o = {
+    jinma:3,
+    get v() { return this.jinma; },
+    set v(v) { this.jinma=v;},
+};
+o.v=2;
+console.log(o.jinma)

@@ -13,11 +13,13 @@
 
         .nav {
             background: #ffe602;
+            color: black;
         }
 
         .container {
+            min-height: 46px;
             max-width: 1080px;
-            overflow: hidden;
+            overflow: auto;
             margin: 0 auto;
         }
 
@@ -28,7 +30,7 @@
 
         .item {
             font: normal 16px '微软雅黑';
-            margin: 12px 16px;
+            padding: 12px 16px;
             height: auto;
             line-height: 12px；
         }
@@ -49,24 +51,28 @@
             text-decoration: none;
             color: black;
         }
-
-        .hidebar {
-            display: none;
+        
+        .xiala{
+            position: relative;
         }
 
-        .item:hover div {
+        .xiala div {
+            display: none;
             max-width: 80px;
             position: absolute;
-            top: 48px;
+            top: 46px;
         }
 
-        .item:hover .hidebar {
+        .hidebar {
             display: block;
-            float: left;
             padding:8px 0 8px 16px;
             margin: 0 0 0 -16px;
             width: 80px;
             background-color: #ffe60259;
+        }
+
+        .xiala:hover div {
+            display: inline;
         }
 
     </style>
@@ -90,17 +96,17 @@
             <div class="item menuitem">
                 <a href="./index.html">课程选择</a>
             </div>
-            <div class="item menuitem">
-                <a href="" class="xiala">社区
-                    <div>
-                        <li class="hidebar">
-                            论坛
-                        </li>
-                        <li class="hidebar">
-                            闯关任务
-                        </li>
-                    </div>
+            <div class="item menuitem xiala">
+                <a href="">社区
                 </a>
+                <div>
+                    <li class="hidebar">
+                        论坛
+                    </li>
+                    <li class="hidebar">
+                        闯关任务
+                    </li>
+                </div>
             </div>
             <div class="item menuitem">
                 <a href="./index.html">关于我们</a>
