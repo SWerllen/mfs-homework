@@ -2,9 +2,40 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<title>抽奖</title>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	#award{
+		height: 40px;
+		padding: 5px;
+		font: 800 22px/30px aclonica;
+		text-align: center;
+		background: #FB9999;
+		box-shadow: 2px 2px 4px 0 #0f0f0f;
+	}
+	.action{
+		display: flex;
+		justify-content: center;
+	}
+	.action button{
+		margin: 20px 40px;
+		border: 2px #FF999A solid;
+		border-radius: 10px;
+		width: 80px;
+		height: 40px;
+		background: #FB9999;
+	}
+</style>
 </head>
 
 <body>
+<div id="award">点击“开始“按钮，开始抽奖！</div>
+<div class="action">
+<button id="start">开 始</button>
+<button id="stop">停 止</button>
+<script src="award-script.js"></script>
+</div>
 </body>
 </html>
