@@ -1,5 +1,9 @@
 var can=document.getElementById("can");
+function f(el){
+	alert(el);
+}
 var ctx=can.getContext("2d");
+
 
 ctx.lineCap="round";
 ctx.translate(100,100);
