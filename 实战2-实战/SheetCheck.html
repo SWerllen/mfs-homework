@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单验证</title>
+<style>
+	*{
+		box-sizing: border-box;
+		margin: 0;
+	}
+/*
+	#sign-error{
+		height: 16px;
+		font: normal 16px/1em aclonica;
+		color:red
+	}
+*/
+	#sign-in{
+		margin: 0 auto;
+		width: 270px;
+	}
+	#sign-in p{
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 0;
+		
+	}
+	.buttons{
+		width: 50%;
+	}
+	</style>	
+</head>
+
+<body>
+<form id="sign-in" action="#" target="_blank" onSubmit="onSignUpFormSubmit()">
+	<p id="sign-error" style="color: red"></p>
+	<p>
+		用户名：<input type="text" name="username" id="username">
+	</p>	
+	<p>
+		口令：<input type="password" name="password" id="password">
+	</p>
+	<p>
+		重复口令：<input type="password" name="password-2" id="password-2">
+	</p>
+	<p class="buttons">
+		<button type="submit">提交</button>
+		<button type="reset">重置</button>
+	</p>
+</form>
+
+<script src="SheetScript.js"></script>
+</body>
+</html>
