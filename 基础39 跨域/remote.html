@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style></style>
+    </head>
+    <body>
+        <div id="aaa">这是远程文件</div>
+        <script>
+			document.domain="a.com";
+		</script>
+   		<script>
+			function fetchData(res){
+				console.log('The responsed data is: '+ res.data);
+				return false;
+			}
+		</script>
+    </body>
+</html>
