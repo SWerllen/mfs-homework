@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style></style>
+    </head>
+    <body>
+        
+        <script>
+function instanceOf(obj,clazz){
+	var curproto=obj;
+	while(curproto){
+		if(curproto.constructor===clazz){
+			return true;
+		}
+		curproto=curproto.__proto__;
+	}
+	return false;
+}
+		function d(){
+		}
+		function s(){
+
+		}
+		var c=new d();
+		console.log(instanceOf(c,d));
+		console.log(instanceOf(c,s));
+		d.prototype=Object.create(s.prototype);
+		var c=new d();
+		console.log(instanceOf(c,s));
+		</script>
+    </body>
+</html>

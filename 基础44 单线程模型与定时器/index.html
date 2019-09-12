@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+//		var Animal={
+//			eat:function(){
+//				console.log("is eating!");
+//			},
+//			sleep:function(){
+//				console.log("is sleeping!");
+//			}
+//		};
+		function Animal(){
+		}
+		Animal.prototype.eat=function(){
+				console.log("is eating!");
+			}
+		Animal.prototype.sleep=function(){
+			console.log("is sleeping!");
+		}
+		function Dog(){
+			Animal.call(this);
+			this.bark=function(){
+				console.log("wang!wangwang!");
+			}
+		}
+		function Cat(){
+			Animal.call(this);
+			this.bark=function(){
+				console.log("Miao~");
+			}
+		}
+		function Human(){
+			Animal.call(this);
+			this.speak=function(){
+				console.log("你好！");
+			}
+		}
+		Dog.prototype.__proto__=Animal.prototype;
+		Cat.prototype=Object.create(Animal.prototype);
+		Human.prototype=Object.create(Animal.prototype);
+	</script>
+</body>
+</html>

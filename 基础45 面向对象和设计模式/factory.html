@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style></style>
+    </head>
+    <body>
+        
+	<script>
+		
+function Person(name){
+	this.name=name;
+}
+Person.prototype.speak=function(){
+	console.log("I'm ",this.name);
+};
+
+function Male(name){
+	Person.call(this,name);
+	this.sex="male";
+}
+function Female(name){
+	Person.call(this,name);
+	this.sex="female";
+}
+
+Male.prototype=Object.create(Person.prototype);		
+Female.prototype=Object.create(Person.prototype);
+function Person(name){
+	this.name=name;
+}
+Person.prototype.speak=function(){
+	console.log("I'm ",this.name);
+};
+
+function Male(name){
+	Person.call(this,name);
+	this.sex="male";
+}
+function Female(name){
+	Person.call(this,name);
+	this.sex="female";
+}
+
+Male.prototype=Object.create(Person.prototype);		
+Female.prototype=Object.create(Person.prototype);
+
+Male.prototype.speak=function(){
+	console.log("I'm ",this.name," and I'm a male.")
+}
+Female.prototype.speak=function(){
+	console.log("I'm ",this.name," and I'm a female.")
+}
+
+function PersonFactory(){
+	this.createPerson=function(name,type){
+		if(type=="male"){
+			return new Male(name);
+		}
+		else if(type=="female"){
+			return new Female(name);
+		}
+		else
+			return null;
+	}
+}
+
+var peFactory=new PersonFactory();
+var aperson=peFactory.createPerson("Werllen","male");
+aperson.speak();
+Male.prototype.speak=function(){
+	console.log("I'm ",this.name," and I'm a male.")
+}
+Female.prototype.speak=function(){
+	console.log("I'm ",this.name," and I'm a female.")
+}
+
+function PersonFactory(){
+	this.createPerson=function(name,type){
+		if(type=="male"){
+			return new Male(name);
+		}
+		else if(type=="female"){
+			return new Female(name);
+		}
+		else
+			return null;
+	}
+}
+
+var peFactory=new PersonFactory();
+var aperson=peFactory.createPerson("Werllen","male");
+aperson.speak();
+		
+	</script>
+    </body>
+</html>

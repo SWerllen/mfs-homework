@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+        <style>
+			.main{
+				height: 2000px;
+				background: rgba(177,177,177,1.00);
+				width: 80%;
+				margin: 0 auto;
+			}
+			.back-top{
+				display: none;
+				width: 80px;
+				height: 80px;
+				background: rgba(255,96,99,0.4);
+				position: fixed;
+				bottom: 10px;
+				right: 20px;
+				text-align: center;
+				color: white;
+				font: bold 60px/1.7em Impact, Haettenschweiler, Franklin Gothic Bold, Arial Black," sans-serif";
+				
+			}
+			.back-top:hover{
+				background: rgba(255,96,99,0.9);
+			}
+			.show{
+				display: block;
+			}
+		</style>
+    </head>
+    <body>
+        <div class="main"></div>
+        <div class="back-top">^</div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript">
+		var but=$(".back-top");
+		but.click(function () {
+            window.scrollTo(0,0);
+			but.removeClass("show");
+        });
+		window.addEventListener("scroll",function () {
+            var curScroll=window.scrollY;
+            if(curScroll>0.5*window.innerHeight) {
+                but.addClass("show");
+            }else{
+                but.removeClass("show");
+			}
+        })
+		</script>
+    </body>
+</html>

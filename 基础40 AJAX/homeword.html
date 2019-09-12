@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>码蜂社作业管理系统</title>
+<style>
+	body{
+		margin: 0;
+	}
+	*{
+		box-sizing: border-box;
+	}
+	.header{
+		background-image: url('https://work.mafengshe.com/static/imgs/banner.jpg');
+		height: 270px;
+		width: 100%;
+		padding: 90px;
+		text-align: center;
+		font:900 '微软雅黑';
+		color: white;
+	}
+	#container{
+		margin: 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	.item{
+		height: 148px;
+		width: 23%;
+		background: #4cd8e0;
+		position: relative;
+		margin: 10px 1%;
+		border-radius: 10px;
+		overflow: hidden;
+		text-align: center;
+		line-height: 148px;
+	}
+	.title{
+		color: white;
+		font: bold 20px/70px '微软雅黑';
+		width: 70px;
+		height: 70px;
+		background: #20b6d2;
+		border-radius: 40px;
+		text-align: center;
+		position: absolute;
+		top: -15px;
+		left: -15px;
+	}
+	.bot-title{
+		color: white;
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		height: 45px;
+		font: 500 16px/45px '微软雅黑';
+		background: #00474c;
+	}
+	.info{
+		position: absolute;
+		right: 10px;
+		top: 0;
+		width: 80px;
+		height: 30px;
+		color: white;
+		font: normal 12px/30px "微软雅黑";
+		display: flex;
+		justify-content: space-around;
+	}
+	#pagination{
+		width: 100%;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+	}
+	[id*="page_"]{
+		font: 600 20px/1em Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	[id*="page_"]:hover {
+		color: white;
+	}
+	</style>
+</head>
+	
+<body>
+<header class="header">
+	<h1>一分耕耘 一分收获</h1>
+	<h2>NO PAINS NO GAINS</h2>
+</header>
+<div id="content">
+	<div id="container"> </div>
+	<div id="pagination"> </div>
+</div>
+<script src="homeword.js">	</script>
+</body>
+</html>

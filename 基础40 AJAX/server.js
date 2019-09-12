@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');//引入文件读取模块
  
-var documentRoot = 'D:\\桌面\\mfs-homework\\基础39 跨域';
+var documentRoot = 'D:\\桌面\\mfs-homework\\基础40 AJAX';
 //需要访问的文件的存放目录
  
 var server= http.createServer(function(req,res){
@@ -34,6 +34,6 @@ var server= http.createServer(function(req,res){
       res.end();
     }
   });
-}).listen(80);
+}).listen(4000);
  
 console.log('服务器开启成功');
